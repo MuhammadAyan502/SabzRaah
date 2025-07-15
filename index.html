@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SabzRaah - سبز راہ</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; }
+    header { background: #006400; color: white; padding: 10px 20px; text-align: center; }
+    nav { display: flex; gap: 15px; justify-content: center; background: #eee; padding: 10px; }
+    nav a { text-decoration: none; color: #333; font-weight: bold; }
+    #map { height: 80vh; width: 100%; }
+    footer { background: #006400; color: white; text-align: center; padding: 10px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SabzRaah - سبز راہ</h1>
+    <p>Har Shehri, Ek Sitara – Har Qadam, Sabz Nazara</p>
+  </header>
+  <nav>
+    <a href="#">Map</a>
+    <a href="#">Climate Dangers</a>
+    <a href="#">Community Action</a>
+    <a href="#">Login</a>
+  </nav>
+  <div id="map"></div>
+  <footer>
+    &copy; 2025 SabzRaah | A Climate Initiative for Pakistan
+  </footer>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
