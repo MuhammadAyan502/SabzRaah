@@ -1,0 +1,21 @@
+name: Auto Deploy & Check
+
+on:
+  schedule:
+    - cron: "0 * * * *" # every hour
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - run: npm install
+      - run: npm run build
+      - name: Check for Errors
+        run: echo "Build completed. Add custom checks here."
